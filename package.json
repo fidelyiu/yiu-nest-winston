@@ -1,0 +1,62 @@
+{
+    "name": "yiu-nest-winston",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "format": "prettier --ignore-path .prettierignore --write .",
+        "clear:dist": "rimraf dist",
+        "build:types": "tsc --project tsconfig.type.json",
+        "build:src": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+        "build": "run-s clear:dist build:types build:src",
+        "version:major": "npm version major",
+        "version:minor": "npm version minor",
+        "version:patch": "npm version patch",
+        "version:premajor": "npm version premajor",
+        "version:preminor": "npm version preminor",
+        "version:prepatch": "npm version prepatch",
+        "version:prerelease": "npm version prerelease"
+    },
+    "type": "module",
+    "types": "./dist/types/index.d.ts",
+    "unpkg": "./dist/umd/yiu-nest-winston.min.js",
+    "jsdelivr": "./dist/umd/yiu-nest-winston.min.js",
+    "browser": "./dist/umd/yiu-nest-winston.min.js",
+    "main": "./dist/cjs/yiu-nest-winston.min.cjs",
+    "module": "./dist/esm/yiu-nest-winston.min.js",
+    "exports": {
+        ".": {
+            "import": "./dist/esm/yiu-nest-winston.min.js",
+            "require": "./dist/cjs/yiu-nest-winston.min.cjs"
+        }
+    },
+    "keywords": [
+        "nest",
+        "winston",
+        "log"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@nestjs/common": "^9.4.0",
+        "@nestjs/core": "^9.4.0",
+        "reflect-metadata": "^0.1.13",
+        "rxjs": "^7.8.0",
+        "winston": "^3.8.2"
+    },
+    "devDependencies": {
+        "@rollup/plugin-terser": "^0.4.0",
+        "@rollup/plugin-typescript": "^11.1.0",
+        "@types/node": "^18.15.11",
+        "@typescript-eslint/eslint-plugin": "^5.57.1",
+        "@typescript-eslint/parser": "^5.57.1",
+        "eslint": "^8.37.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^2.8.7",
+        "rimraf": "^4.4.1",
+        "rollup": "^3.20.2",
+        "tslib": "^2.5.0",
+        "typescript": "^5.0.3"
+    }
+}
