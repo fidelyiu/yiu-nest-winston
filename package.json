@@ -18,6 +18,7 @@
     },
     "type": "module",
     "types": "./dist/types/index.d.ts",
+    "typings": "./dist/types/index.d.ts",
     "unpkg": "./dist/umd/yiu-nest-winston.min.js",
     "jsdelivr": "./dist/umd/yiu-nest-winston.min.js",
     "browser": "./dist/umd/yiu-nest-winston.min.js",
@@ -25,6 +26,7 @@
     "module": "./dist/esm/yiu-nest-winston.min.js",
     "exports": {
         ".": {
+            "types": "./dist/types/index.d.ts",
             "import": "./dist/esm/yiu-nest-winston.min.js",
             "require": "./dist/cjs/yiu-nest-winston.min.cjs"
         }
